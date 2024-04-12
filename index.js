@@ -58,7 +58,7 @@ function calculateTax(){
     else{ ageErrorIcon.style.display = 'none'; }
 
     if(!isNaN((document.getElementById("grossIncome")).value) && !isNaN((document.getElementById("extraIncome")).value) && !isNaN((document.getElementById("deductions")).value) 
-        && grossIncome>0 && extraIncome>0 && deductions>0 && totalIncome>0
+        && grossIncome>=0 && extraIncome>=0 && deductions>=0 && totalIncome>=0
     ){
         var tax= totalTax(grossIncome,extraIncome,age,deductions);
         const modal=document.getElementById('resultModal');
